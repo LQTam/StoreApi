@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route method="GET" url="/V1/mgs-storelocation/get/">
+		<service class="MGS\StoreLocator\Api\StoreApiRepositoryInterface" method="getStore"/>
+		<resources>
+			<resource ref="MGS_StoreLocator::getstore"/>
+		</resources>
+	</route>	
+
+	<route method="GET" url="/V1/mgs-storelocation/getall/">
+		<service class="MGS\StoreLocator\Api\StoreApiRepositoryInterface" method="getALLStore"/>
+		<resources>
+			<resource ref="MGS_StoreLocator::getstore"/>
+		</resources>
+	</route>
+
+	<route method="GET" url="/V1/mgs-storelocation/getBySearchCriteria/">
+		<service class="MGS\StoreLocator\Api\StoreApiRepositoryInterface" method="getStoreBySearchCriteria"/>
+		<resources>
+			<resource ref="MGS_StoreLocator::getBySearchCriteria"/>
+		</resources>
+	</route>
+</routes>
